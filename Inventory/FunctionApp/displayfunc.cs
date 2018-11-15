@@ -18,7 +18,7 @@
         /// <param name="invoiceHelper"></param>
         /// <returns>returns response message</returns>
         [FunctionName("DisplayFunc")]
-        public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)]HttpRequestMessage req,
+        public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "get", Route = null)]HttpRequestMessage req,
           TraceWriter log,
           [Inject] IInventoryHelper inventoryHelper,
           [Inject] ITable tableHelper)
